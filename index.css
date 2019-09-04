@@ -1,8 +1,122 @@
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
 :root {
     --main-bg-color: white;
     --all-text-color: grey;
     --all-header-color: black; 
   }
+
+/* all images settings
+hamburger: 21*16
+  nowness logo : 340*56
+  menu-icon : 21/24*19
+  library-video-tumb :220*142
+  misical secttion img: 431.6*276
+  delight video: 320*204
+  more love video: 374*239
+  social image share: 250*250
+  social icon: 21.12*25
+  more love : 150*150
+*/
+
+body {
+    font-family: FuturaPT,Helvetica,Arial,sans-serif;
+    margin:0;
+}
+
+/* header formatting */
+section.header {
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    background-color: var(--main-bg-color);
+    z-index: 10;
+}
+
+.top-site-title {
+    width: 84%;
+    height: 80px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hamburger {
+    width: 131px
+}
+
+.brand-logo {
+    width: 350px;
+    height: 60px;
+}
+
+.menu-ic {
+    width: 21px;
+    height: 19px;
+}
+
+.menu-icon {
+    margin: auto 10px;
+}
+
+.top-header-links {
+    height: 20px;
+    margin: auto 0;
+}
+
+.bottom-site-title {
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    padding: auto;
+    border-top: solid 0.5px var(--all-text-color);
+    border-bottom: solid 1px var(--all-text-color);
+}
+
+.links-box-header {
+    margin: auto ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a.link-menu {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: var(--all-text-color);
+}
+
+li.nav-link {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.carousel {
+    position: relative;
+    top: 130px;
+}
   
