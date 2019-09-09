@@ -157,7 +157,7 @@ li.nav-link {
     width: 45%;
     height: 150px;
     position: absolute;
-    bottom: 5px;
+    bottom: -10px;
     left: 30%;
     z-index: 0;
 }
@@ -304,6 +304,7 @@ section.musical-notes {
 .musical-video-item {
     width: 432px;
     height: 300px;
+    text-align: center;
 }
 
 .musical-video-tumb {
@@ -314,6 +315,11 @@ section.musical-notes {
 .misical-vid-img {
     width: 100%;
     height: 276px;
+}
+
+.video-title-bold {
+    margin: 10px auto 7px auto;
+    font-weight: bolder;
 }
 
 
