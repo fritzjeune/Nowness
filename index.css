@@ -47,7 +47,7 @@ font-family: 'Montserrat', sans-serif;
 */
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
     margin:0;
 }
 
@@ -147,8 +147,9 @@ li.nav-link {
 }
 
 .carousel-image {
-    width: 100%;
+    width: 100%; 
     height: 550px;
+    object-fit: cover;
 }
 
 .car-caption {
@@ -182,10 +183,13 @@ h1 {
 }
 
 section.video-library {
+    width: 97%;
+    height: auto;
     position: relative;
     top: 200px;
     margin-bottom: 500px;
     margin-left: 20px;
+    padding: 35px 0 35px 0;
 }
 
 .video-lib-box {
@@ -194,23 +198,23 @@ section.video-library {
 
 .videos-list {
     width: 100%;
-    height: 198px;
-    background: #1423;
+    height: 210px;
+    /* background: #1423; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .video-tumb {
     width: 100%;
-    height: 142px;
+    height: 130px;
 }
 
 .video-item {
-    width: 220px;
-    height: 150px;
-    margin: 0 10px 45px 0;
+    width: 210px;
+    height: 140px;
+    margin-right: 30px;
 }
 
 .video-tumb-container {
@@ -223,8 +227,8 @@ section.video-library {
     width: 30px;
     position: relative;
     background-color: #fff;
-    bottom: 67px;
-    right: -190px;
+    bottom: 65px;
+    right: -180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,10 +253,10 @@ section.video-library {
     background-color: black;
     color: #fff;
     width: fit-content;
-    padding: 4px;
+    padding: 4px 6px;
     position: relative;
-    left: 190px;
-    bottom: 91px;
+    left: 181px;
+    bottom: 86px;
     z-index: 8;
 }
 
@@ -266,5 +270,52 @@ section.video-library {
     font-size: 0.9rem;
     text-align: center;
 }
+
+/* musical note section */
+
+section.musical-notes {
+    position: relative;
+    top: -230px;
+    width: 97%;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.sect-musical-title {
+    text-align: center;
+    margin: 10px auto 20px auto;
+}
+
+.section-title {
+    font-size: 1.7rem;
+    word-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+.musical-videos-box {
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.musical-video-item {
+    width: 432px;
+    height: 300px;
+}
+
+.musical-video-tumb {
+    width: 100%;
+    height: 276px;
+}
+
+.misical-vid-img {
+    width: 100%;
+    height: 276px;
+}
+
+
 
   
