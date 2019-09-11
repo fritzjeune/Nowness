@@ -53,6 +53,10 @@ body {
     margin:0;
 }
 
+section {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -259,10 +263,12 @@ section.video-library {
     bottom: 86px;
 }
 
-.video-item-title {
-    font-size: 0.8rem;
+.video-title-bold {
+    font-size: 1rem;
     margin-bottom: 2px;
     text-align: center;
+    margin: 10px auto 7px auto;
+    font-weight: bolder;
 }
 
 .video-descriptions {
@@ -326,11 +332,6 @@ section.musical-notes {
 .dura-pos-musical {
     top: -86px;
     right: -399px;
-}
-
-.video-title-bold {
-    margin: 10px auto 7px auto;
-    font-weight: bolder;
 }
 
 /* guest selected  */
@@ -443,14 +444,14 @@ section.musical-notes {
 }
 
 .opt-posit-delight {
-    visibility: hidden;
+    /* visibility: hidden; */
     top: -64px;
     right: -290px;
 }
 
 .dura-pos-delight {
-    top: -84px;
-    right: -285px;
+    top: -86px;
+    right: -290px;
 }
 
 .video-delight-cont {
@@ -485,3 +486,140 @@ section.musical-notes {
     width: 25px;
     margin: 20px;
 }
+
+/* most loved section */
+
+.best-videos {
+    position: relative;
+    top: -50px;
+    width: 97%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.most-loved {
+    text-align: center;
+    width: 50%;
+}
+
+.most-video-item {
+    width: 374px;
+    height: 350px;
+    margin: 30px auto 0;
+}
+
+.most-video-tumb {
+    width: 374px;
+    height: 239px;
+}
+
+.most-vid-img {
+    width: 100%;
+    height: 100%;
+}
+
+.opt-posit-most {
+    /* visibility: hidden; */
+    top: -64px;
+    right: -344px;
+}
+
+.dura-pos-most {
+    top: -86px;
+    right: -343px;
+}
+
+
+/* styling share section  */
+
+.share {
+    width: 97%;
+    margin: auto;
+}
+
+.social-share-cont {
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto;
+}
+
+.share-item {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "share-tumb-box social-share-description";
+}
+
+.share-tumb-box {
+    width: 250px;
+    height: 250px;
+    grid-area: share-tumb-box;
+}
+
+.share-tumb {
+    width: 100%;
+    height: 100%;   
+}
+
+.social-share-description {
+    grid-area: social-share-description;
+    padding-top: 30px;
+}
+
+.simple-title-text {
+    font-size: 1.3rem;
+}
+
+.share-ic {
+    position: relative;
+    top: -170px;
+    width: 40px;
+    color: #fff;
+}
+
+.btn-all {
+    margin: 10px auto;
+}
+
+/* sub share section stylings */
+
+.sub-share-section {
+    widows: 97%;
+    display: flex;
+    flex-direction: row;
+}
+
+.become-member {
+    padding: 10px;
+}
+
+.sub-share {
+    width: 50%;
+    height: 350px;
+}
+
+.nowness-connection1 {
+
+}
+
+.connect-logos {
+    width: 100%;
+    /* display: grid; */
+}
+
+/* mis deudas
+    guerline 1000   500
+    dieufene 300    300
+    mme duclaire 1000  500
+    lelene 800  800
+    sogebank 5000 2500
+
+    total : 4600
+
+*/
+
+
+
