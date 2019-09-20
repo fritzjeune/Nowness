@@ -22,7 +22,8 @@ time, mark, audio, video {
 :root {
     --main-bg-color: white;
     --all-text-color: grey;
-    --all-header-color: black; 
+    --all-header-color: black;
+    --hover-line-color: #c9a16e;
   }
 
 /* all images settings
@@ -55,6 +56,8 @@ body {
 
 section {
     text-align: center;
+    border-bottom:solid 1px #c9a16e;
+    height: fit-content;
 }
 
 a {
@@ -98,6 +101,7 @@ section.header {
 .brand-logo {
     width: 350px;
     height: 60px;
+    object-fit: none;
 }
 
 .menu-ic {
@@ -134,9 +138,11 @@ a.link-menu {
     text-transform: uppercase;
     padding: 15px 15px;
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--all-text-color);
 }
+
+
 
 li.nav-link {
     list-style: none;
@@ -153,7 +159,7 @@ img {
     position: relative;
     top: 128px;
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 .carousel-container {
@@ -163,7 +169,7 @@ img {
 
 .carousel-image {
     width: 100%; 
-    height: 550px;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -172,8 +178,8 @@ img {
     width: 45%;
     height: 150px;
     position: absolute;
-    bottom: -10px;
-    left: 30%;
+    bottom: -0px;
+    left: 25%;
     z-index: 0;
 }
 
@@ -208,6 +214,28 @@ section.video-library {
 
 .video-lib-box {
     height: 160px;
+    margin-bottom: 25px;
+}
+
+.arrow {
+    transform: rotate(45deg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(55% - 50px);
+    z-index: 8;
+}
+
+.ar-left {
+    border-bottom: solid 4px  black;
+    border-left: solid 4px  black;
+    left: 0;
+}
+
+.ar-right {
+    border-top: solid 4px  black;
+    border-right: solid 4px  black;
+    right: 0;
 }
 
 .videos-list {
@@ -236,7 +264,7 @@ section.video-library {
 }
 
 .vid-container-option {
-    /* visibility: hidden; */
+    visibility: hidden;
     width: 30px;
     position: relative;
     background-color: #fff;
@@ -247,7 +275,7 @@ section.video-library {
 }
 
 .cont-option-lib {
-    bottom: 65px;
+    bottom: 64px;
     right: -180px;
 }
 
@@ -267,8 +295,8 @@ section.video-library {
 }
 
 .duration-video-lib {
-    left: 181px;
-    bottom: 86px;
+    left: 176px;
+    bottom: 84px;
 }
 
 .video-title-bold {
@@ -404,13 +432,13 @@ section.musical-notes {
 
 .opt-posit-guest {
     /* visibility: hidden; */
-    top: -65px;
+    top: -64px;
     right: -205px;
 }
 
 .dura-pos-guest {
-    top: -86px;
-    right: -205px;
+    top: -84px;
+    right: -201px;
 }
 
 .guest-image-item {
@@ -458,8 +486,8 @@ section.musical-notes {
 }
 
 .dura-pos-delight {
-    top: -86px;
-    right: -290px;
+    top: -85px;
+    right: -286px;
 }
 
 .video-delight-cont {
@@ -476,6 +504,7 @@ section.musical-notes {
   .subscribe {
       position: relative;
       top: -180px;
+      height: 250px;;
       text-align: center;
   }
 
@@ -499,11 +528,15 @@ section.musical-notes {
 
 .best-videos {
     position: relative;
-    top: -50px;
-    width: 97%;
+    top: -110px;
+    width: 97%; 
     margin: auto;
     display: flex;
     flex-direction: row;
+}
+
+.love-line {
+    border-left: solid 1px var(--hover-line-color)
 }
 
 .most-loved {
@@ -528,14 +561,14 @@ section.musical-notes {
 }
 
 .opt-posit-most {
-    /* visibility: hidden; */
+    visibility: hidden;
     top: -64px;
     right: -344px;
 }
 
 .dura-pos-most {
-    top: -86px;
-    right: -343px;
+    top: -85px;
+    right: -340px;
 }
 
 
@@ -638,7 +671,6 @@ section.musical-notes {
 .more-to-love {
     width: 97%;
     margin: 20px auto;
-
 }
 
 .more-to-love > h3 {
@@ -652,6 +684,7 @@ section.musical-notes {
 
 .love-container {
     width: 100%;
+    margin-bottom: 50px;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
