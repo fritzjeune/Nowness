@@ -1,0 +1,13 @@
+<%- include("headers") %>
+    <div class="wrappe">
+        <h1>Create your NOWNESS Account</h1>
+        <h3>User Account</h3>
+        <form action="/signup-account" method="post">
+            <label for="userName">User Name:</label><input type="text" name="userName" id="userName"><br><br>
+            <label for="password">Password:</label><input type="password" name="password" id="password"><br><br>
+            <label for="confirmPassword">Confirm Password:</label><input type="password" name="confirmPassword" id="password"><br><br>
+            <input type="checkbox" name="termAccept" id="termAccept" required><label for="termAccept">Do you accept our <a href="http://" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></label><br><br>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+<%- include("footers") %>

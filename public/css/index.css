@@ -20,6 +20,11 @@ time, mark, audio, video {
     box-sizing: border-box;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
 :root {
     --main-bg-color: white;
     --all-text-color: grey;
@@ -211,32 +216,36 @@ section.video-library {
 .video-lib-box {
     height: 250px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
-/* .arrow {
-    transform: rotate(45deg);
-    width: 50px;
-    height: 50px;
+.arrow {
+    width: fit-content;
+    height: fit-content;
+    background-color: #dbd9d9;
+    border-radius: 50%;
+    bottom: -145px;
     position: absolute;
-    top: calc(55% - 50px);
     z-index: 8;
 }
 
-.ar-left {
-    border-bottom: solid 4px  black;
-    border-left: solid 4px  black;
-    left: 0;
+.arr-left {
+    left: 50px;
 }
 
-.ar-right {
-    border-top: solid 4px  black;
-    border-right: solid 4px  black;
-    right: 0;
-} */
+.arr-right {
+    right: 50px;
+}
+
+svg-arr {
+    margin: auto;
+}
 
 .videos-list {
     width: 100%;
     height: 100%;
+    position: relative;
+    left: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -247,6 +256,7 @@ section.video-library {
     width: 245px;
     height: 250px;
     margin-right: 30px;
+
 }
 
 .video-item-title {
@@ -256,39 +266,44 @@ section.video-library {
 .video-tumb-container {
     width: 100%;
     height: 162px;
+    overflow: hidden;
     margin-bottom: 20px;
 }
 
 .video-tumb {
     width: 100%;
     height: 100%;
+    /* z-index: 8; */
+    position: relative;
 }
 
 .vid-container-option {
-    visibility: hidden;
+    /* visibility: hidden; */
     width: 45px;
     height: 90px;
     position: relative;
+    top: -4px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 9;
+    z-index: 2;
 }
 
 .cont-option-lib {
-    bottom: 96px;
     right: -200px;
 }
 
 .videos-opt {
     widows: 100%;
     height: 50%;
-    justify-items: center;
 }
 
-.icon-videos {
-    margin-top: 10px;
+svg.icon-videos {
+    margin: 15px auto;
+    fill: #000;
+    width: 15px;
+    height: 15px;
 }
 
 .duration {
@@ -299,12 +314,12 @@ section.video-library {
     height: 25px;
     padding: 4px 6px;
     position: relative;
-    z-index: 8;
+    top: -120px;
+    z-index: 1;
 }
 
 .duration-video-lib {
     left: 200px;
-    bottom: 121px;
 }
 
 .video-title-bold {
@@ -365,14 +380,11 @@ section.musical-notes {
 }
 
 .opt-posit-musical {
-    /* visibility: hidden; */
-    bottom: -64px;
-    right: -402px;
+    right: -387px;
 }
 
 .dura-pos-musical {
-    top: -87px;
-    right: -395px;
+    right: -387px;
 }
 
 /* guest selected  */
@@ -433,14 +445,11 @@ section.musical-notes {
 }
 
 .opt-posit-guest {
-    /* visibility: hidden; */
-    top: -64px;
-    right: -205px;
+    right: -190px;
 }
 
 .dura-pos-guest {
-    top: -84px;
-    right: -201px;
+    right: -190px;
 }
 
 .guest-image-item {
@@ -479,14 +488,11 @@ section.musical-notes {
 }
 
 .opt-posit-delight {
-    /* visibility: hidden; */
-    top: -64px;
-    right: -290px;
+    right: -275px;
 }
 
 .dura-pos-delight {
-    top: -85px;
-    right: -286px;
+    right: -275px;
 }
 
 .video-delight-cont {
@@ -501,7 +507,7 @@ section.musical-notes {
 /* section newsletters  */
 
   .subscribe {
-      height: 350px;;
+      height: 390px;;
       text-align: center;
   }
 
@@ -523,6 +529,14 @@ section.musical-notes {
     font-family: inherit;
     font-size: 1rem;
     font-weight: bolder;
+  }
+
+  .ajaxResponse {
+      margin-top: 10px;
+      width: 100%;
+      height: 40px;
+      /* padding: 50px auto; */
+      /* border: solid 1px #f0cd09; */
   }
 
 /* most loved section */
@@ -559,14 +573,11 @@ section.musical-notes {
 }
 
 .opt-posit-most {
-    visibility: hidden;
-    top: -64px;
-    right: -344px;
+    right: -329px;
 }
 
 .dura-pos-most {
-    top: -85px;
-    right: -340px;
+    right: -329px;
 }
 
 

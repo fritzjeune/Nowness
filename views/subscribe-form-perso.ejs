@@ -1,0 +1,24 @@
+<%- include("headers") %>
+        <div class="wrappe">
+            <h1>Create your NOWNESS Account</h1>
+            <h3>Personal informations</h3>
+            <form action="/signup-personal" id="userinfo" method="post">
+                <label for="urSurname">Surname: </label><input type="text" name="urSurname" id="urSurname"><br><br>
+                <label for="urMiddleName">Middle Name:</label> <input type="text" name="urMiddleName" id="urMiddleName"><br><br>
+                <label for="urName">Name:</label><input type="text" name="urName" id="urName"><br><br>
+                <label for="birthday">Birthday:</label> <input type="date" name="birthday" id="birthday"><br><br>
+                <fieldset>
+                    <legend>Sexe</legend>
+                    <input type="radio" name="sexe" id="sexeMale" value="Male"><label for="sexeMale">Male</label>
+                    <input type="radio" name="sexe" id="sexeFemale" value="Female"><label for="sexeFemale">Female</label>
+                </fieldset>
+                <br>
+                <button type="submit">Next</button>
+            </form>
+
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+        </div>
+        
+<%- include("footers") %>

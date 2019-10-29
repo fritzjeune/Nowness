@@ -7,15 +7,52 @@ body {
      
 }
 
-h1, h3 {
-    text-align: center;
+/* all the form stylings */
+
+div.wrappe {
+    width: 40%;
+    margin: 20px auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-input, label{
-    /* display: block; */
-    width: 150px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+div.wrappe > h3 {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 1.5rem;
+}
+
+input[type = "text"], input[type = "email"], input[type = "tel"], input[type = "password"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #000;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+
+input[type = "checkbox"] {
+  width: fit-content;
+  margin-right: 10px;
+}
+
+select, option, input[type= "date"] {
+    width: 300px;
+    padding: 10px;
+    border: solid 1px #000;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+textarea {
+    text-align: start;
+}
+
+legend {
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    margin: 0 auto;
 }
 
 label {

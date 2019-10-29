@@ -1,36 +1,68 @@
+// jshint esversion:6
 
+var parentElement = $(".videos-list");
+console.log(parentElement.children().length);
 
-// animations for the videos options
+// // animations for the videos options
+$(".vd-tumb").mouseover(function(event) {
+  if ($(this).children(".vid-container-option").css("top") === "-4px") {
+    $(this).children(".vid-container-option").animate({ top: "-91px"},{duration: 200, easing: "linear", complete: function() {
+      $(this).children(".vid-container-option").css({ top: "-95px"});
+    }});
+  }
+  $(this).children("img").css({opacity : 0.7});
+  // console.log(event);
+});
 
-var videoTumb = document.querySelectorAll(".vd-tumb");
+$(".vd-tumb").mouseleave(function(event) {
+  if ($(this).children(".vid-container-option").css("top") === "-91px") {
+    $(this).children(".vid-container-option").animate({top: "-4px"}, {duration: 100, easing: "linear", complete: function() {
+      $(this).children(".vid-container-option").css({ top: "-4px"});
+    }});
+  }
+  $(this).children("img").css({opacity : 1});
+});
 
-for (let i = 0; i < videoTumb.length; i++) {
-
-    videoTumb[i].addEventListener("mouseover", function () {
-        // alert("i got click");
-        videoTumb[i].querySelector("img").style.opacity = "0.4";
-        videoTumb[i].querySelector(".vid-container-option").style.visibility = "visible";
-    });
-
-    videoTumb[i].addEventListener("mouseout", function () {
-        // alert("i got click");
-        videoTumb[i].querySelector("img").style.opacity = "1";
-        videoTumb[i].querySelector(".vid-container-option").style.visibility = "hidden";
-    });
-}
-
-// control for the video library section carousel
-
-var arrows = document.querySelectorAll(".arrow");
-
-for (let i = 0; i < arrows.length; i++) {
-    arrows[i].addEventListener("mouseover", function() {
-        var listVideos = document.querySelector(".videos-list");
-        if (arrows[i].classList.contains("ar-left")) {
-            alert("this is the left arrow!");
-        } else if (arrows[i].classList.contains("ar-right")) {
-            alert("this is the right arrow!")
-        }
-    });
+// 
+var index = 0;
+var firstItem;
+$(".arrow").click(function() {
+  if ($(this).hasClass("arr-right")) {
+    while (index <= (parentElement.children(".video-item").length - 6)) {
+    firstItem = parentElement.children(".video-item")[index];
+    firstItem.style.display= "none";
+    index++;
+    break;
+    }
+  } else if ($(this).hasClass("arr-left")) {
+    while (index > 0) {
+    firstItem = parentElement.children()[index - 1];
+    firstItem.style.display= "block";
+    index--;
+    break;
     
+    }
+  }
+});
+
+// ajax features...
+
+const $form = $("#subs-submit");
+
+$form.on("submit" , submitHandler);
+
+function submitHandler(e) {
+  e.preventDefault();
+
+  $.ajax({
+    url: "/",
+    type: "POST",
+    data: $form.serialize()
+  }).done(response => {
+    $("#subs-submit").each(function(){
+      this.reset();
+    });
+      $(".ajaxResponse").html(response);
+      console.log(response);
+  });
 }
